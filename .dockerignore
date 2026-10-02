@@ -1,0 +1,33 @@
+# ==============================================================================
+# Docker Build Ignore Rules — Acme Corp Security
+# ==============================================================================
+# Files listed here are excluded from the Docker build context.
+# Prevents bloated images and guarantees credentials NEVER enter image layers.
+# ==============================================================================
+
+# Virtual Environment & Version Control
+.venv/
+.git/
+.gitignore
+
+# Secrets and Local Configurations (CRITICAL)
+.env
+.env.*
+*.pem
+*.key
+
+# Compiled Bytecode & Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local Vector Database & Logs (Mount via Docker Volumes instead)
+chroma_db/
+tickets.jsonl
+*.log
+assistant.log
+
+# Testing & Development Scratchpads
+tests/
+try_tool.py
+scripts/

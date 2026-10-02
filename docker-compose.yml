@@ -1,0 +1,36 @@
+# ==============================================================================
+# Docker Compose Orchestration — Acme Corp AI Assistant
+# ==============================================================================
+# Connects the containerized assistant service to the host machine's Ollama engine
+# while persisting the vector database index across container lifecycles.
+#
+# Usage:
+#   docker compose build
+#   docker compose run --rm assistant
+# ==============================================================================
+
+services:
+  assistant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: acme-kb-assistant
+    # Inject environment variables from local .env at RUNTIME (never baked into the image)
+    env_file:
+      - .env
+    environment:
+      # Directs the container to communicate with Ollama running on the host OS
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+      CHROMA_DIR: /app/chroma_db
+    extra_hosts:
+      # Ensures 'host.docker.internal' resolves correctly on Linux Docker hosts
+      - "host.docker.internal:host-gateway"
+    volumes:
+      # Named volume for persistent vector store storage across container restarts
+      - chroma_data:/app/chroma_db
+    stdin_open: true  # Enables interactive standard input for CLI prompts
+    tty: true         # Allocates a pseudo-TTY
+
+volumes:
+  chroma_data:
+    driver: local
