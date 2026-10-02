@@ -1,0 +1,21 @@
+# ==============================================================================
+# Pre-commit Configuration — Automated Security Guardrails
+# ==============================================================================
+# These hooks execute locally whenever a developer runs 'git commit'.
+# If ANY hook detects a secret, the commit is immediately aborted.
+# ==============================================================================
+
+repos:
+  # 1. Gitleaks: Dedicated, high-speed scanner for 160+ known token patterns
+  #    (OpenAI, Anthropic, AWS, GitHub tokens, Slack Webhooks, Private Keys)
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+
+  # 2. Yelp detect-secrets: Entropy analysis engine that flags unexpected random strings
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
