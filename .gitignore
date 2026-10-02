@@ -1,0 +1,60 @@
+# ==============================================================================
+# Git Ignore Rules — Acme Corp AI Assistant
+# ==============================================================================
+
+# Secrets and Environment Variables (CRITICAL — NEVER REMOVE)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python Bytecode & Compilation Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Vector Database (Confidential internal document vectors)
+chroma_db/
+*.parquet
+
+# Runtime Logs, Generated Data & Support Tickets
+tickets.jsonl
+*.log
+assistant.log
+
+# Testing & Type Checking Caches
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Operating System & IDE Specific
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
