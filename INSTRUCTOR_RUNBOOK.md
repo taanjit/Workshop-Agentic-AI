@@ -1,7 +1,6 @@
 # Instructor Runbook: Industrial Agentic AI Workshop
 
 > **Facilitator:** Dr. Anjit T A  
-> **Institution:** TKM College of Engineering  
 > **Course:** Applying LLMs to Industrial Projects (Agentic AI)  
 > **Audience:** Postgraduate Students (M.Tech / MCA / Research Scholars)  
 > **Delivery Format:** 5 Hours (40% Concepts / 60% Hands-on Coding Lab)

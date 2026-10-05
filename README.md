@@ -1,6 +1,5 @@
 # Industrial Agentic AI Workshop: Hands-on Lab
 
-> **Institution:** TKM College of Engineering, Kollam  
 > **Course:** Applying LLMs to Industrial Projects — Production-Grade AI Agents  
 > **Facilitator:** Dr. Anjit T A  
 > **Target Audience:** Postgraduate Students & Software Engineers  
@@ -10,7 +9,7 @@
 
 ## 🚀 Workshop Overview
 
-Welcome to the hands-on repository for the **Industrial Agentic AI Workshop** at TKM College of Engineering. 
+Welcome to the hands-on repository for the **Industrial Agentic AI Workshop**. 
 
 In this workshop, you will step beyond academic notebook experiments and learn how software teams architect, secure, test, and containerize **production-grade AI agents**. Throughout the day, you will build **"Acme Corp Internal Knowledge Base Assistant"**—an intelligent agent that answers HR/IT questions using official company documents, executes tools, demands human authorization before performing risky actions, protects itself against prompt injection and PII leaks, and packages cleanly inside a secure Docker container.
 

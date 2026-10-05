@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Pre-flight Verification Script for Agentic AI Workshop
-TKM College of Engineering
 
 Run this script prior to the workshop to verify that your environment
 has all the required software and local models installed.
@@ -75,7 +74,6 @@ def check_ollama():
 def main():
     print("=" * 60)
     print("  Agentic AI Workshop — Pre-flight Environment Check")
-    print("  TKM College of Engineering")
     print("=" * 60)
     print()
 
